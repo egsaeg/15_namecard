@@ -7,42 +7,49 @@
     <style>
         * {margin: 0; padding: 0; }
         body {font-family: 'GmarketSansMedium'}
-        a {color: #333; text-decoration: none;}
+        a {color: #333;text-decoration: none;}
 
-        .face_box {width: 130px; height: auto; border: 1px solid #ccc; margin: 40px auto 0 auto;}
-        .face {width: 130px; height: 130px; border: 1px solid red; border-radius: 50%; overflow: hidden;}
-        .name {margin-top: 14px; font-size: 24px;border: 1px solid #000;text-align: center;}
-        .job {font-size: 15px; text-align: center;}
+        .face_box {width: 130px; height: auto; margin: 40px auto 0 auto; z-index: 2; position: relative;}
+        .face {width: 130px; height: 130px; border-radius: 50%; overflow: hidden;}
+        .name {margin-top: 14px; font-size: 24px; text-align: center; color: green;}
+        .name a {color: green;}
+        .job {font-size: 15px; text-align: center; color: green;}
 
-        .button_box {width: 230px; height: 230px; margin: 34px auto 0 auto; border: 1px solid #ccc; text-align: center;}
+        .button_box {width: 230px; height: auto; margin: 34px auto 0 auto; text-align: center; z-index: 2; position: relative;}
         /* .button_box a {border: 1px solid #000; display: block; width: 190px; height: 38px; text-align: center; line-height: 38px; margin: 0 auto 25px auto; border-radius: 20px;} */
         .button_box a {border: 1px solid #000; padding: 8px 60px; display: inline-block; margin-bottom: 25px;border-radius: 20px; font-family: 'GmarketSansMedium'}
-        @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+        .button_box .button1 {background: #fcd8d8;}
+        .button_box .button2 {background: #f4e5b3;}
+        .button_box .button3 {background: #c1df96;}
+        .button_box .button4 {background: #9fb9ea;}
 
-        .map_box {width: 300px; height: 400px; margin: 64px auto 0 auto; border: 1px solid #ccc;}
+
+        .map_box {width: 300px; height: 400px; margin: 64px auto 100px auto; z-index: 2; position: relative;}
         .map_box .title {font-size: 24px; text-align: center;}
-        .map_box .box {width: 300px; height: 350px; border: 1px solid #000; margin-top: 20px;}
+        .map_box .box {width: 300px; height: 350px; border: 1px solid #000; margin-top: 20px; border-radius: 20px; overflow: hidden;}
+
+        .docbar {width: 100%; height: 64px; background: #ddd; text-align: center; position: fixed; bottom: 0; z-index: 20;}
+        .docbar a {width: 44px; height: 44px; background: #000; display: inline-block; border-radius: 50%;}
+
+        .circle {width: 700px; height: 700px; border-radius: 50%; background: #000; position: fixed; left: -300px; top: -150px; overflow: hidden; border: 1px solid #000;}
+        .circle img {width: 100%; height: 100%;}
+
     </style>
 </head>
 <body>
     <div class="face_box">
         <div class="face">
-            <img src="로버트.png" alt="robert">
+            <img src="images/robert.png" alt="robert">
         </div>
-        <div class="name"><a href="#">Robert</a></div>
+        <div class="name">Robert</div>
         <div class="job">Webdesigner</div>
     </div>
     
     <div class="button_box">
-        <a href="#">전화 문의</a>
-        <a href="#">문자 문의</a>
-        <a href="#">카카오톡 문의</a>
-        <a href="#">이메일 문의</a>
+        <a href="tel:01043399239" class="button1">전화 문의</a>
+        <a href="sms:01043399239" class="button2">문자 문의</a>
+        <a href="#" class="button3">카카오톡 문의</a>
+        <a href="mailto:jenjeng01@naver.com" class="button4">이메일 문의</a>
     </div>
     
     <div class="map_box">
@@ -70,6 +77,17 @@
         </div>
     </div>
     
-    <div class="docbar"></div>
+    <div class="docbar">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+
+    <div class="circle">
+        <img src="images/christmas.png" alt="">
+    </div>
+
 </body>
 </html>
